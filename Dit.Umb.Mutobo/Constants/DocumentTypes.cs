@@ -490,6 +490,20 @@
             }
         }
 
+        public static class Game
+        {
+            public const string Alias = "games";
+
+            public static class Fields
+            {
+                public const string Title = "titel";
+                public const string StartMessage = "startMessage";
+                public const string Player = "player";
+                public const string End1 = "end1";
+                public const string End2 = "end2";
+                public const string End3 = "end3";
+            }
+        }
 
     }
 }
