@@ -459,6 +459,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="scripts\Dreadhorn\Pixelp\dir.php" />
     <None Include="config\appSettings.config" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="css\Dreadhorn\Memory.css" />
@@ -473,7 +474,17 @@
     <Content Include="css\Dreadhorn\Memorybilder\Retro-Block-Question.png" />
     <Content Include="css\Dreadhorn\Memorybilder\Retro-Block.png" />
     <Content Include="css\Dreadhorn\Memorybilder\trote.mp3" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild1.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild2.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild3.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild4.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild5.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild6.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild7.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\Bilder\bild8.jpg" />
+    <Content Include="css\Dreadhorn\Pixelp\style.css" />
     <Content Include="scripts\Dreadhorn\Memory.js" />
+    <Content Include="scripts\Dreadhorn\Pixelp\Index.js" />
     <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\mutobo.ch - Web Deploy %28hostfactory%29.pubxml" />
     <Content Include="Views\WCContentPage.cshtml" />
@@ -483,6 +494,7 @@
     <Content Include="Views\Partials\Modules\CardContainer.cshtml" />
     <Content Include="Views\Partials\Modules\Quote.cshtml" />
     <Content Include="Views\Memory.cshtml" />
+    <Content Include="Views\Pixelp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
