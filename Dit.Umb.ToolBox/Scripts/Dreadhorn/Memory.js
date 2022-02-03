@@ -143,7 +143,7 @@ for(i=4*paar;i>2*paar;i--){
 
     console.log(spalte);
     console.log(sreihe);
-    document.getElementById("karten").innerHTML = document.getElementById("karten").innerHTML + "<div id='f" + pickOne[random] + "' class='feld " + spalte + sreihe + "'><div><img src='../../css/Dreadhorn/Memorybilder/bild"+bildnr+".jpg' alt='"+altb+"'></div></div>";
+    document.getElementById("karten").innerHTML = document.getElementById("karten").innerHTML + "<div id='f" + pickOne[random] + "' class='feld " + spalte + sreihe + "'><div><img src='../../pics/Memorybilder/bild"+bildnr+".jpg' alt='"+altb+"'></div></div>";
     paare = paare - 1;
 
     pickOne.splice(random, 1);

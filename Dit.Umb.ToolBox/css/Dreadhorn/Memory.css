@@ -1,6 +1,6 @@
 /* Jede Karte */
 .feld {
-    background-image: url(Memorybilder/Retro-Block.png); /*Bild für die umgedrehte Karte */
+    background-image: url(../../pics/Memorybilder/Retro-Block.png); /*Bild für die umgedrehte Karte */
     width: 150px;
     height: 150px;
     margin: 2px;
