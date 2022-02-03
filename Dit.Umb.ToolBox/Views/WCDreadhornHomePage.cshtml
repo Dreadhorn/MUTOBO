@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Dreadhorn.PageModels.DreadhornHomePage>
+@{
+    Layout = "WCBasePage.cshtml";
+}
+
+<o-body>
+
+    @if (Model.Modules != null && Model.Modules.Any())
+    {
+        foreach (var module in Model.Modules)
+        {
+            @module.RenderModule(this.Html)
+        }
+    }
+</o-body>

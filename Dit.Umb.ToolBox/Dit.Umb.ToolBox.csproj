@@ -483,6 +483,7 @@
     <Content Include="Views\Partials\Modules\CardContainer.cshtml" />
     <Content Include="Views\Partials\Modules\Quote.cshtml" />
     <Content Include="Views\Memory.cshtml" />
+    <Content Include="Views\WCDreadhornHomePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -628,6 +629,10 @@
     <Content Include="Views\Partials\Accordeon.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ch.Dreadhorn\Dreadhorn\Dreadhorn.csproj">
+      <Project>{fb0d2e62-a2a8-493b-b1d7-04fc33d0b381}</Project>
+      <Name>Dreadhorn</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dit.Umb.Mutobo\Dit.Umb.Mutobo.csproj">
       <Project>{2147941A-3725-4B64-84BB-7FDA22DE4066}</Project>
       <Name>Dit.Umb.Mutobo</Name>

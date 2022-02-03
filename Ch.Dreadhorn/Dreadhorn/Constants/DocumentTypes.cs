@@ -10,7 +10,7 @@ namespace Dreadhorn.Constants
     {
         public static class DreadhornHomePage
         {
-            public const string Alias = "HomePage";
+            public const string Alias = "dreadhornHomePage";
 
             public static class Fields
             {

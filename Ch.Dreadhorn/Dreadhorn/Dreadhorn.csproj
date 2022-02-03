@@ -271,6 +271,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Composer\DreadhornComposer.cs" />
     <Compile Include="Constants\DocumentTypes.cs" />
     <Compile Include="Controller\PageController\DreadhornContentPageController.cs" />
     <Compile Include="Controller\PageController\DreadhornHomePageController.cs" />
