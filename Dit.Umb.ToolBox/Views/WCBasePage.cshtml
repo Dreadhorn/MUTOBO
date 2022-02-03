@@ -20,9 +20,12 @@
         Html.RequiresCss("~/web-components-cms-template/src/css/variablesWeb4MIndustry.css");
         Html.RequiresCss($"~/web-components-cms-template/src/css/misc.css");
         Html.RequiresCss($"~/web-components-cms-template/src/css/fonts.css");
+        Html.RequiresCss("~/css/styles.css");
         Html.RequiresJs($"~/web-components-cms-template/wc-config.js?baseUrl=/web-components-cms-template/src/es/components/");
+        Html.RequiresJs("~/Scripts/library/jquery-3.6.0.min.js");
     }
 
+    <script type="module" src=@("https://unpkg.com/@divriots/flying-santa/dist/index.js?module")></script>
     @Html.RenderCssHere()
     <title>@Model.PageTitle</title>
     @Html.Action("Index", "Seo")
@@ -30,9 +33,10 @@
     {
         @Html.Action("Index", "CssVariables", new { Theme = Model.Theme as ITheme })
     }
-    
+
     <style>
         @@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
         html {
             --color-hover: #800080;
             --color-secondary: black;
@@ -45,12 +49,17 @@
 
 </head>
 <body>
+    <flying-santa></flying-santa>
     <p-general>
         @Html.Partial("~/Views/Partials/Header.cshtml", Model.HeaderConfiguration)
         @RenderBody()
         @Html.Partial("~/Views/Partials/Footer.cshtml", Model.FooterConfiguration as Dit.Umb.Mutobo.Configuration.FooterConfiguration)
     </p-general>
-@Html.Action("Index", "WcRender")
-@Html.RenderJsHere()
+
+    @Html.Action("Index", "WcRender")
+    @{
+        Html.RequiresJs("~/scripts/main.js");
+    }
+    @Html.RenderJsHere()
 </body>
 </html>

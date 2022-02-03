@@ -473,7 +473,11 @@
     <Content Include="css\Dreadhorn\Memorybilder\Retro-Block-Question.png" />
     <Content Include="css\Dreadhorn\Memorybilder\Retro-Block.png" />
     <Content Include="css\Dreadhorn\Memorybilder\trote.mp3" />
-    <Content Include="scripts\Dreadhorn\Memory.js" />
+	<Content Include="scripts\Dreadhorn\cursor.js" />
+	<Content Include="scripts\Dreadhorn\Memory.js" />
+	<Content Include="scripts\Dreadhorn\svg\einhorn.js" />
+    <Content Include="scripts\Dreadhorn\svg\finger.js" />
+    <Content Include="scripts\library\jquery-3.6.0.min.js" />
     <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\mutobo.ch - Web Deploy %28hostfactory%29.pubxml" />
     <Content Include="Views\WCContentPage.cshtml" />

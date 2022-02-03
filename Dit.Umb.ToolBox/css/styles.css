@@ -1,0 +1,11 @@
+html {
+}
+
+header, footer {
+    cursor: auto;
+    color: blue;
+}
+
+#curser {
+    position: absolute;
+}
