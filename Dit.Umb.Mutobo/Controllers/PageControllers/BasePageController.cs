@@ -19,20 +19,14 @@ namespace Dit.Umb.Mutobo.Controllers.PageControllers
         protected readonly IPageLayoutService _pageLayoutService;
         protected readonly IThemeService _themeService;
 
-
-  
-
         public BasePageController()
         {
             _themeService = (IThemeService) DependencyResolver.Current.GetService(typeof(IThemeService));
             _pageLayoutService = (IPageLayoutService)DependencyResolver.Current.GetService(typeof(IPageLayoutService));
         }
 
-
-
         public ActionResult Index<T>(BasePage basePage) where T : BasePage
         {
-
             var currentNode = Current.UmbracoHelper.AssignedContentItem;
             var redirectLink = currentNode.Value<Umbraco.Web.Models.Link>(DocumentTypes.BasePage.Fields.RedirectLink);
 
@@ -44,17 +38,17 @@ namespace Dit.Umb.Mutobo.Controllers.PageControllers
 
                 System.Web.HttpContext.Current.Response.Redirect(url);
             }
-
             try
             {
-                basePage.HeaderConfiguration = _pageLayoutService.GetHeaderConfiguration(CurrentPage);
-                basePage.FooterConfiguration = _pageLayoutService.GetFooterConfiguration(CurrentPage);
-                basePage.FooterConfiguration.HomePageLogo = basePage.HeaderConfiguration.Logo;
+                // Check if an other Controller sets the HeaderConfiguration
+                if(basePage.HeaderConfiguration == null)
+                    basePage.HeaderConfiguration = _pageLayoutService.GetHeaderConfiguration(CurrentPage);
+                if (basePage.FooterConfiguration == null)
+                {
+                    basePage.FooterConfiguration = _pageLayoutService.GetFooterConfiguration(CurrentPage);
+                    basePage.FooterConfiguration.HomePageLogo = basePage.HeaderConfiguration.Logo;
+                }
                 //basePage.Theme = _themeService.GetTheme(basePage.Content);
-
-                
-
-
 
             }
             catch(AppSettingsException e)
@@ -62,9 +56,6 @@ namespace Dit.Umb.Mutobo.Controllers.PageControllers
                 Logger.Error(this.GetType(),e, $"{AppConstants.LoggingPrefix} {e.Message}");
                 throw e;
             }
-          
-
-
 
             return base.Index(basePage as T);
         }

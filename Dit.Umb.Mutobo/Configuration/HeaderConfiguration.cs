@@ -18,7 +18,7 @@ namespace Dit.Umb.Mutobo.Configuration
 
         public Image Logo { get; set; }
 
-        public Link LogoUrl => this.Value<Umbraco.Web.Models.Link>(DocumentTypes.Configuration.Link);
+        public Link LogoUrl => this.Value<Link>(DocumentTypes.Configuration.Link);
 
         public IEnumerable<Language> Languages { get; set; }
 

@@ -25,8 +25,9 @@ namespace Dit.Umb.Mutobo.PageModels
         public string MetaDescription => Content.Value<string>(DocumentTypes.BasePage.Fields.MetaDescription);
         public string MetaKeywords => Content.Value<string>(DocumentTypes.BasePage.Fields.MetaKeywords);
         public bool ExcludeFromXMLSitemap => Content.Value<bool>(DocumentTypes.BasePage.Fields.ExcludeFromXMLSitemap);
-        public string SearchEngineFrequency => Content.HasValue(DocumentTypes.BasePage.Fields.SearchEngineFrequency) ? Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineFrequency) : string.Empty;
-        public string SearchEngineRelativePriority => Content.HasValue(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) ? Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) : string.Empty;
+        public string SearchEngineFrequency => Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineFrequency, fallback: Fallback.To(Fallback.Ancestors, Fallback.DefaultValue), defaultValue: "weekly");
+        public string SearchEngineRelativePriority => Content.HasValue(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) ? Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) : "0.5";
+        
         public string GoogleAnalyticsKey => Content.HasValue(DocumentTypes.BasePage.Fields.GoogleAnalyticsKey)
             ? Content.Value<string>(DocumentTypes.BasePage.Fields.GoogleAnalyticsKey)
             : string.Empty;

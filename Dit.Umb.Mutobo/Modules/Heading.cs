@@ -21,7 +21,7 @@ namespace Dit.Umb.Mutobo.Modules
 
         public string NavigationAnchor => this.HasValue(DocumentTypes.Heading.Fields.NavigationAnchor)
             ? this.Value<string>(DocumentTypes.Heading.Fields.NavigationAnchor)
-            : null;
+            : string.Empty;
 
         public Heading(IPublishedElement content) : base(content)
         {
@@ -31,7 +31,7 @@ namespace Dit.Umb.Mutobo.Modules
         {
             var bld = new StringBuilder();
 
-                var anchor = $"id=\"{NavigationAnchor}\"" ?? string.Empty;
+            var anchor = !string.IsNullOrEmpty(NavigationAnchor) ? $"id={NavigationAnchor}" : string.Empty;
 
                 switch (RenderAs)
                 {

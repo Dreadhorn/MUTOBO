@@ -14,7 +14,7 @@ namespace Dit.Umb.ToolBox.Controllers.SurfaceControllers
         public ActionResult Index()
         {
             var homePage = Umbraco.AssignedContentItem.AncestorsOrSelf().FirstOrDefault(c =>
-                c.ContentType.Alias == DocumentTypes.HomePage.Alias);
+                c.IsComposedOf(DocumentTypes.HomePage.Alias));
 
             var code = homePage?.Value<string>(DocumentTypes.BasePage.Fields.GoogleAnalyticsKey) ?? string.Empty;
             

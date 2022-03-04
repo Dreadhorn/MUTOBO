@@ -51,7 +51,7 @@
                 </p>
                 @if (slide.Link != null)
                 {
-                    <a href="@(slide.Link?.Url ?? "#")" target="@(slide.Link?.Target ?? string.Empty)">@Current.UmbracoHelper.GetDictionaryValue(DictionaryKeys.Global.ReadMore)</a>
+                    <a href="@(slide.Link?.Url ?? "#")" target="@(slide.Link?.Target ?? string.Empty)">@Html.UmbracoTranslation(DictionaryKeys.Global.ReadMore)</a>
                 }
             </div>
         </div>
